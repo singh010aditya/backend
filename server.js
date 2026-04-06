@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // ALL ROUTES COMMENTED
-// app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/auth", require("./routes/authRoutes"));
 // app.use("/api/trips", require("./routes/tripRoutes"));
 // app.use("/api/bookings", require("./routes/bookingRoutes"));
 // app.use("/api/payment", require("./routes/paymentRoutes"));
