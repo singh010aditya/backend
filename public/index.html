@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Ticket System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🎟️ Ticket Booking System</h2>
+    <nav>
+        <button onclick="show('home')">Home</button>
+        <button onclick="show('register')">Register</button>
+        <button onclick="show('login')">Login</button>
+        <button onclick="show('admin')">Admin</button>
+    </nav>
+</header>
+
+<!-- REGISTER -->
+<div id="register" class="page">
+    <h2>User Registration</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="alert('Registered Successfully')">Register</button>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="page">
+    <h2>Login</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="alert('Login Successful')">Login</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page">
+    <h2>Search Transport</h2>
+
+    <select id="type">
+        <option>Train</option>
+        <option>Bus</option>
+        <option>Flight</option>
+    </select>
+
+    <label>From:</label>
+    <input list="cities" id="from" placeholder="Enter or select city">
+
+    <label>To:</label>
+    <input list="cities" id="to" placeholder="Enter or select city">
+
+    <!-- Popular Cities -->
+    <datalist id="cities">
+        <option value="Delhi">
+        <option value="Mumbai">
+        <option value="Chandigarh">
+        <option value="Shimla">
+        <option value="Bangalore">
+        <option value="Kolkata">
+    </datalist>
+
+    <input type="date" id="date">
+
+    <button onclick="search()">Search</button>
+
+    <div id="results"></div>
+</div>
+
+<!-- SEATS -->
+<div id="seats" class="page">
+    <h2>Select Seat</h2>
+    <div id="grid"></div>
+</div>
+
+<!-- PAYMENT -->
+<div id="payment" class="page">
+    <h2>Payment</h2>
+    <input type="text" placeholder="Card Number">
+    <button onclick="pay()">Pay</button>
+</div>
+
+<!-- TICKET -->
+<div id="ticket" class="page">
+    <h2>Booking Confirmed 🎉</h2>
+    <p id="info"></p>
+    <button onclick="cancel()">Cancel Ticket</button>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="page">
+    <h2>Admin Dashboard</h2>
+    <button onclick="users()">Users</button>
+    <button onclick="reports()">Reports</button>
+    <div id="adminData"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

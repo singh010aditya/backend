@@ -1,0 +1,54 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #eef2f7;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+nav button {
+    margin: 5px;
+    padding: 8px;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+#home {
+    display: block;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Seats */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+}
+
+.seat {
+    background: lightgray;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat:hover {
+    background: green;
+    color: white;
+}
